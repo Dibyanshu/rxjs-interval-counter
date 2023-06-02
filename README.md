@@ -1,3 +1,3 @@
 # rxjs-interval-counter
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/rxjs-enrvng)
+[Try Editing on StackBlitz ⚡️](https://stackblitz.com/edit/rxjs-enrvng)
