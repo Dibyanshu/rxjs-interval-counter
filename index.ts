@@ -7,8 +7,8 @@ import {
   switchMap,
   Subscription,
   timer,
-takeUntil,
-mergeMap
+  takeUntil,
+  mergeMap,
 } from 'rxjs';
 
 export class RequestPreviewComponent {
@@ -25,6 +25,7 @@ export class RequestPreviewComponent {
         switchMap((err) => {
           if (err.status === '500') {
             return interval(1000).pipe(
+              startWith(1000),
               mergeMap((_) => {
                 console.log();
                 return of([{ status: 'approved' }]);
@@ -38,7 +39,7 @@ export class RequestPreviewComponent {
       .subscribe((result) => {
         if (!!result && result.length > 0) {
           console.log('if case', result);
-        } 
+        }
       });
   }
 
